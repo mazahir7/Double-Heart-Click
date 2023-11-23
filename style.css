@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+*::selection {
+	background-color: transparent;
+}
+
+html {
+	/* changes the 1REM from 16px to 10px */
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Oswald", sans-serif;
+	text-align: center;
+	overflow: hidden;
+	padding: 1rem;
+	background-color: #9cf6f6;
+}
+
+h1,
+h2 {
+	text-align: center;
+	padding: 0.4rem;
+	letter-spacing: 1px;
+	font-size: 2rem;
+}
+
+h1 .fa-heart {
+	color: red;
+	transform: scale(1);
+	animation: heartBeat 0.7s ease infinite;
+}
+
+@keyframes heartBeat {
+	to {
+		transform: scale(1.2);
+		text-shadow: 0 1px 4px red;
+	}
+}
+
+.loveMe {
+	max-width: 80rem;
+	height: 45rem;
+	margin: 1rem auto 0;
+	border-radius: 3px;
+	background-image: url(stadiums/manchesterUnited.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	filter: brightness(110%);
+	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
+	position: relative;
+}
+
+.loveMe i {
+	position: absolute;
+	color: red;
+	transform: translate(-50%, -50%) scale(0);
+	animation: liked 0.5s linear;
+}
+
+@keyframes liked {
+	to {
+		transform: translate(-50%, -50%) scale(20);
+		opacity: 0;
+	}
+}
